@@ -1,0 +1,21 @@
+server:
+    port: '${PORT:8081}'
+    
+eureka:
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+        server:
+            waitTimeInMsWhenSyncEmpty: 0
+        serviceUrl:
+          defaultZone : 'http://localhost:8761/eureka/'
+
+spring:
+  profiles:
+    active: default
+  application:
+        name: TopicsService
+  cloud:
+    config:
+      uri: 'http://localhost:8888'
+        
